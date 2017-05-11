@@ -16,7 +16,7 @@ function PortfolioProjects (projectName, projectUrl, projectDescription ){
 }
 
 PortfolioProjects.prototype.toHtml = function() {
-  var $newArticle = $('article.template').clone();
+  var $newArticle = $('#').clone();
 
 function EducationHistory (schoolName,cityName, studyField) {
   this.schoolName = schoolName;
