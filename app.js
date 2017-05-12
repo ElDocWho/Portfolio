@@ -1,13 +1,13 @@
 'use strict';
 
-function JobHistory(companyName, namePosition, namePosition){
+function JobHistory(companyName, namePosition, cityLocation){
   this.companyName = companyName;
   this.positionName = namePosition;
   this.cityLocation = cityLocation;
 };
 
-JobHistory.prototype.toHtml = function() {
-  var $newArticle = $('article.template').clone();
+PortfolioProjects.prototype.toHtml = function() {
+  var $newJobHistory = $('#').clone();
 
 function PortfolioProjects (projectName, projectUrl, projectDescription ){
   this.projectName = projectName;
@@ -16,7 +16,7 @@ function PortfolioProjects (projectName, projectUrl, projectDescription ){
 }
 
 PortfolioProjects.prototype.toHtml = function() {
-  var $newArticle = $('#').clone();
+  var $newJobHistoryw = $('#').clone();
 
 function EducationHistory (schoolName,cityName, studyField) {
   this.schoolName = schoolName;
@@ -25,4 +25,21 @@ function EducationHistory (schoolName,cityName, studyField) {
 }
 
 EducationHistory.prototype.toHtml = function() {
-  var $newArticle = $('article.template').clone();
+  var $JobHistory = $('').clone();
+
+  var rawData = [
+    {
+      companyName:     'place Holder',
+      positionName:    'place Holder',
+      cityLocation:    'place Holder'
+    },
+    {
+      projectName:     'place Holder',
+      projectURL:    'place Holder',
+      projectDescription:    'place Holder'
+    },
+    {
+      schoolName:     'place Holder',
+      cityName:    'place Holder',
+      studyFIeld:    'place Holder'
+    },
