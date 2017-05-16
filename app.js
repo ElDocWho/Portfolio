@@ -1,13 +1,6 @@
 'use strict';
 
-function JobHistory(companyName, namePosition, cityLocation){
-  this.companyName = companyName;
-  this.positionName = namePosition;
-  this.cityLocation = cityLocation;
-};
-
-PortfolioProjects.prototype.toHtml = function() {
-  var $newJobHistory = $('#').clone();
+var projects = [];
 
 function PortfolioProjects (projectName, projectUrl, projectDescription ){
   this.projectName = projectName;
@@ -16,30 +9,15 @@ function PortfolioProjects (projectName, projectUrl, projectDescription ){
 }
 
 PortfolioProjects.prototype.toHtml = function() {
-  var $newJobHistoryw = $('#').clone();
+  var $newProject = $('.template').clone();
+  console.log($newProject);
+  console.log('working');
+  $($newProject).removeClass('template');
+  $newProject.find('address a').html(this.author).attr(this.authorUrl);
+  $newProject.find('h1').html(this.title);
+  $newProject.find('.project-desc').html(this.body);
 
-function EducationHistory (schoolName,cityName, studyField) {
-  this.schoolName = schoolName;
-  this.cityName = cityName;
-  this.studyFIeld = studyField;
-}
-
-EducationHistory.prototype.toHtml = function() {
-  var $JobHistory = $('').clone();
-
-  var rawData = [
-    {
-      companyName:     'place Holder',
-      positionName:    'place Holder',
-      cityLocation:    'place Holder'
-    },
-    {
-      projectName:     'place Holder',
-      projectURL:    'place Holder',
-      projectDescription:    'place Holder'
-    },
-    {
-      schoolName:     'place Holder',
-      cityName:    'place Holder',
-      studyFIeld:    'place Holder'
-    },
+  $newProject.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn)) / 60 / 60 / 24 / 1000) + ' days ago');
+  $newProject.append('<hr>');
+  return $newProject;
+};
