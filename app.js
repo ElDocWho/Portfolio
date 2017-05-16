@@ -7,23 +7,23 @@ function PortfolioProjects (projectName, projectUrl, projectDescription ){
 };
 
 PortfolioProjects.prototype.toHtml = function() {
-  var $newJobHistory = $('#').clone();
+  var $newPortfolioProject = $('#').clone();
 };
 
 var rawData = [
   {
-    companyName:     'place Holder',
-    positionName:    'place Holder',
-    cityLocation:    'place Holder'
+    projectName:     'place Holder',
+    projectURL:    'place Holder',
+    projectDescription:    'place Holder'
   },
   {
-    companyName:     'place Holder',
-    positionName:    'place Holder',
-    cityLocation:    'place Holder'
+    projectName:     'place Holder',
+    projectURL:    'place Holder',
+    projectDescription:    'place Holder'
   },
   {
-    companyName:     'place Holder',
-    positionName:    'place Holder',
-    cityLocation:    'place Holder'
+    projectName:     'place Holder',
+    projectURL:    'place Holder',
+    projectDescription:    'place Holder'
   }
 ];
