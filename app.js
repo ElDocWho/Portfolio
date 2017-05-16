@@ -2,22 +2,29 @@
 
 var projects = [];
 
-function PortfolioProjects (projectName, projectUrl, projectDescription ){
-  this.projectName = projectName;
-  this.projectURL = projectUrl;
-  this.projectDescription = projectDescription;
+function PortfolioProjects (rawDataObject){
+  this.projectName = rawDataObject.projectName;
+  this.projectURL = rawDataObject.projectURL;
+  this.projectDescription = rawDataObject.projectDescription;
 }
 
 PortfolioProjects.prototype.toHtml = function() {
-  var $newProject = $('.template').clone();
-  console.log($newProject);
-  console.log('working');
+  var $newProject = $('project.template').clone();
   $($newProject).removeClass('template');
-  $newProject.find('address a').html(this.author).attr(this.authorUrl);
-  $newProject.find('h1').html(this.title);
-  $newProject.find('.project-desc').html(this.body);
-
-  $newProject.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn)) / 60 / 60 / 24 / 1000) + ' days ago');
-  $newProject.append('<hr>');
+  $newProject.find('address a').html(this.projectName).attr(this.projectURL);
+  $newProject.find('h1').html(this.projectName);
+  $newProject.find('.project-desc').html(this.projectDescription);
   return $newProject;
 };
+
+rawData.sort(function(a,b) {
+  return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
+});
+
+rawData.forEach(function(projectObject) {
+  projects.push(new PortfolioProjects(projectObject));
+});
+projects.forEach(function(project) {
+  $('#projects').append(project.toHtml());
+  console.log(project.toHtml());
+});
