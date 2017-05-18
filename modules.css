@@ -12,3 +12,8 @@ html, body {
 .template {
   display: none;
 }
+
+body {
+  background-color: black;
+  color: white;
+}
