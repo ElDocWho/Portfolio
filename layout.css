@@ -7,11 +7,13 @@
 
 html, body {
   height: 100%;
-  background-image: url(img/vot2.gif);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
 }
+body {
+  background-repeat: no-repeat;
+  background-image: url(img/vot2.gif);
+  background-size: 100%;
 
+}
 li {
   display: inline;
   border-radius: 500px;
@@ -27,7 +29,7 @@ nav {
   width: 100%;
 }
 header {
-  background-image: url(img/volt3.gif);
+  background-image: url(img/volt4.gif);
   border-radius: 100px;
   text-align: center;
   padding: 2%;
@@ -36,7 +38,3 @@ header {
   margin-right: 1%;
   align-items: center;
 }
-main {
-  background-image: url();
-}
-header:hover
