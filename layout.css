@@ -7,12 +7,37 @@
 
 html, body {
   height: 100%;
+  background-image: url(img/vot2.gif);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 
 li {
   display: inline;
+  border-radius: 500px;
+  font-size: 500%;
+  color: black;
+  text-align: center;
+  text-decoration: none;
 }
 
-ul {
+nav {
   background-color: blue;
+  height: 15%;
+  width: 100%;
 }
+header {
+  background-image: url(img/volt3.gif);
+  border-radius: 100px;
+  color: ;
+  text-align: center;
+  padding: 2%;
+  width: 15%;
+  margin-top: 2%;
+  margin-right: 1%;
+  align-items: center;
+}
+main {
+  background-image: url();
+}
+header:hover
