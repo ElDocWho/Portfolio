@@ -22,14 +22,13 @@ li {
 }
 
 nav {
-  background-color: blue;
+  background-color: gray;
   height: 15%;
   width: 100%;
 }
 header {
   background-image: url(img/volt3.gif);
   border-radius: 100px;
-  color: ;
   text-align: center;
   padding: 2%;
   width: 15%;
