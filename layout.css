@@ -11,7 +11,7 @@ html, body {
 body {
   background-repeat: no-repeat;
   background-image: url(img/vot2.gif);
-  background-size: auto 100%;
+  background-size: 100%;
 
 }
 li {
