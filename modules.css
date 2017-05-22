@@ -25,6 +25,7 @@ body {
   }
   .main-nav ul{
     display: block;
+    height: 50%;
   }
   .main-nav li{
     float: none;
@@ -61,7 +62,7 @@ section#projects {
   float: left;
   display: block;
   margin-top: 150px;
-  margin-left: 43%;
+  margin-left: 42%;
 }
 
 hr {
