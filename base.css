@@ -8,3 +8,18 @@
 html, body {
   height: 100%;
 }
+ul {
+  font-family: 'Indie Flower', cursive;
+}
+
+a {
+  text-decoration: none;
+}
+nav.main-nav a{
+  float: none;
+  box-sizing: border-box;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 2%;
+}
