@@ -38,3 +38,11 @@ header {
   margin-right: 1%;
   align-items: center;
 }
+#preview {
+  height: 50%;
+  width: 50%;
+  float: right;
+  margin-right: auto;
+  margin-top: -30%;
+
+}

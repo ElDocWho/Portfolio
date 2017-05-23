@@ -11,7 +11,8 @@ function PortfolioProjects (rawDataObject){
 PortfolioProjects.prototype.toHtml = function() {
   var $newProject = $('project.template').clone();
   $($newProject).removeClass('template');
-  $newProject.find('address a').html(this.projectName).attr(this.projectURL);
+  $newProject.find('address a').html(this.projectName);
+  $newProject.find('address a').attr('href', this.projectURL);
   $newProject.find('h1').html(this.projectName);
   $newProject.find('.project-desc').html(this.projectDescription);
   return $newProject;
@@ -26,5 +27,24 @@ rawData.forEach(function(projectObject) {
 });
 projects.forEach(function(project) {
   $('#projects').append(project.toHtml());
-  console.log(project.toHtml());
+});
+
+$('#projects project:nth-child(2) header').on('click', function() {
+  window.location.href = 'https://github.com/ElDocWho/bus-mall1';
+});
+$('#projects header:nth-child(3)').on('click', function() {
+  window.location.href = 'https://github.com/ElDocWho/cookie-stand1';
+});
+$('#projects header:nth-child(4)').on('click', function() {
+  window.location.href = 'https://github.com/ElDocWho/lab-02-about-me';
+});
+
+$('#projects project:nth-child(2) header').on('mouseover', function(){
+  $('#preview').html('<img src="img/busmall.png" alt="busmall">');
+});
+$('#projects project:nth-child(3)').hover(function(){
+  $('#preview').html('<img src="img/busmall.png" alt="busmall">');
+});
+$('#projects project:nth-child(4)').hover(function() {
+  console.log('working3');
 });
