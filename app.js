@@ -39,12 +39,14 @@ $('#projects header:nth-child(4)').on('click', function() {
   window.location.href = 'https://github.com/ElDocWho/lab-02-about-me';
 });
 
-$('#projects project:nth-child(2) header').on('mouseover', function(){
-  $('#preview').html('<img src="img/busmall.png" alt="busmall">');
+$('h1, projectLink, a:nth-child(2)').hover(function(){
+  $('#preview').html('<img src="img/mouse.gif" alt="busmall">').show();
+},
+function () { $('#preview').hide();
 });
-$('#projects project:nth-child(3)').hover(function(){
-  $('#preview').html('<img src="img/busmall.png" alt="busmall">');
+$(document).ready(function(){
+  $('nav.main-navig').hide();
 });
-$('#projects project:nth-child(4)').hover(function() {
-  console.log('working3');
+$('#ham').click(function(){
+  $('nav.main-navig').toggle();
 });
