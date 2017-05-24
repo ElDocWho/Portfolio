@@ -44,13 +44,10 @@ header {
   float: right;
   margin-right: 20%;
   margin-top: -30%;
+  border-radius: 50%;
 
 }
-/*#ham {
-  display: none;
-  height: 80px;
-  width: 60px;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-}*/
+
+#round {
+  border-radius: 200%; 
+}
