@@ -11,7 +11,7 @@ html, body {
 body {
   background-repeat: no-repeat;
   background-image: url(img/vot2.gif);
-  background-size: auto 100%;
+  background-size: 100% 100%;
 
 }
 li {
@@ -38,3 +38,19 @@ header {
   margin-right: 1%;
   align-items: center;
 }
+#preview {
+  height: 50%;
+  width: 50%;
+  float: right;
+  margin-right: 20%;
+  margin-top: -30%;
+
+}
+/*#ham {
+  display: none;
+  height: 80px;
+  width: 60px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}*/

@@ -17,30 +17,63 @@ body {
   background-color: black;
   color: white;
 }
-
-@media screen and (max-width: 905px){
+@media screen and (min-width: 906px){
+  #ham {
+    display: none;
+  }
   nav.main-nav{
-    color: white;
+  background: none;
+  display: block;
+  }
+  nav.main-navig{
+  background: none;
+  display: none;
+
+  }
+}
+@media screen and (max-width: 905px){
+  nav.main-navig{
+  background: none;
+  display: none;
+
+  }
+  nav.main-nav{
+  display: none;
+  }
+  #ham {
+    display: block;
+    height: 80px;
+    width: 60px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+
+  #preview {
+    height: 50%;
+    width: 50%;
+    float: right;
+    margin-right: 20%;
+    margin-top: 10%;
   }
   html {
     width: 100%;
-    height: 100%;
+    /*height: 100%;*/
     color: white;
   }
-  .main-nav ul{
+  .main-navig ul{
     display: block;
     height: 50%;
     color: white;
   }
-  .main-nav li{
+  .main-navig li{
     float: none;
     display: block;
     font-size: 250%;
     text-align: center;
     color: white;
-
   }
-  nav.main-nav{
+  nav.main-navig{
   background: none;
   display: block;
   }
@@ -74,6 +107,4 @@ section#projects {
 hr {
   display: none;
 }
-.icon-github {
-  font-display:
 }
