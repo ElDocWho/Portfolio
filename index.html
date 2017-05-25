@@ -3,17 +3,49 @@
   <head>
     <meta charset="utf-8">
     <title>Fortunato Maycotte</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="modules.css">
+    <link rel="stylesheet" href="layout.css"><link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
 
   </head>
   <body>
     <nav class="main-nav">
-    <ul>
-
-    </ul>
-  </nav>
-
+        <span class="icon-menu"></span>
+        <ul >
+          <li data-content="Home"><a href="#" class="icon-home"> Home</a></li>
+          <li data-content="about"><a href="#" class="icon-address-book"> About</a></li>
+          <li> <a href="#" target="_blank" class="icon-twitter3"> Twitter</a></li>
+          <li><a href="https://github.com/ElDocWho" target="_blank" class="icon-github"> GitHub</a></li>
+        </ul>
+    </nav>
+    <hr>
+    <nav class="main-navig">
+        <span class="icon-menu"></span>
+        <ul >
+          <li data-content="Home"><a href="#" class="icon-home"> Home</a></li>
+          <li data-content="about"><a href="#" class="icon-address-book"> About</a></li>
+          <li> <a href="#" target="_blank" class="icon-twitter3"> Twitter</a></li>
+          <li><a href="https://github.com/ElDocWho" target="_blank" class="icon-github"> GitHub</a></li>
+        </ul>
+    </nav>
+    <img id="ham" src="img/ham.png" alt='hamburger'>
+    <main>
+    <section id="projects">
+      <project class="template">
+        <header>
+          <h1>Project Name</h1>
+          <div class="projectLink">
+            Project Link: <address><a href="">Project</a></address>
+          </div>
+        </header>
+        <section class=".project-desc"></section>
+      </project>
+    </section>
+    <div id="preview"></div>
+  </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="data.js"></script>
     <script type="text/javascript" src="app.js"></script>
   </body>
 </html>

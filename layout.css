@@ -1,0 +1,56 @@
+* {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+body {
+  background-repeat: no-repeat;
+  background-image: url(img/vot2.gif);
+  background-size: 100% 100%;
+
+}
+li {
+  display: inline;
+  border-radius: 500px;
+  font-size: 500%;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+}
+
+nav {
+  background-color: gray;
+  height: 15%;
+  width: 100%;
+}
+header {
+  background-image: url(img/volt4.gif);
+  border-radius: 100px;
+  text-align: center;
+  padding: 2%;
+  width: 15%;
+  margin-top: 2%;
+  margin-right: 1%;
+  align-items: center;
+}
+#preview {
+  height: 50%;
+  width: 50%;
+  float: right;
+  margin-right: 20%;
+  margin-top: -30%;
+
+}
+/*#ham {
+  display: none;
+  height: 80px;
+  width: 60px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}*/
