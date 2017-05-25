@@ -14,10 +14,10 @@ PortfolioProjects.prototype.toHtml = function() {
   $newProject.find('address a').html(this.projectName);
   $newProject.find('address a').attr('href', this.projectURL);
   $newProject.find('h1').html(this.projectName);
-  $newProject.find('.project-desc').html(this.projectDescription);
+  $newProject.find('project.project-desc').html(this.projectDescription);
+  console.log($newProject);
   return $newProject;
 };
-
 rawData.sort(function(a,b) {
   return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
 });
@@ -28,19 +28,8 @@ rawData.forEach(function(projectObject) {
 projects.forEach(function(project) {
   $('#projects').append(project.toHtml());
 });
-
-$('#projects project:nth-child(2) header').on('click', function() {
-  window.location.href = 'https://github.com/ElDocWho/bus-mall1';
-});
-$('#projects header:nth-child(3)').on('click', function() {
-  window.location.href = 'https://github.com/ElDocWho/cookie-stand1';
-});
-$('#projects header:nth-child(4)').on('click', function() {
-  window.location.href = 'https://github.com/ElDocWho/lab-02-about-me';
-});
-
-$('h1, projectLink, a:nth-child(2)').hover(function(){
-  $('#preview').html('<img src="img/mouse.gif" alt="busmall">').show();
+$('header').hover(function(){
+  $('#preview').html('<img id="round" src="img/mouse.gif" alt="busmall">').show();
 },
 function () { $('#preview').hide();
 });
@@ -49,4 +38,13 @@ $(document).ready(function(){
 });
 $('#ham').click(function(){
   $('nav.main-navig').toggle();
+});
+$('#projects project:nth-of-type(2)').on('click', function() {
+  window.location.href = 'https://github.com/ElDocWho/bus-mall1';
+});
+$('#projects header:nth-of-type(3)').on('click', function() {
+  window.location.href = 'https://github.com/ElDocWho/cookie-stand1';
+});
+$('#projects header:nth-child(4)').on('click', function() {
+  window.location.href = 'https://github.com/ElDocWho/lab-02-about-me';
 });
