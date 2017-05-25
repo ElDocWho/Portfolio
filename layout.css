@@ -42,3 +42,25 @@ header {
   border-radius: 200%;
   margin-left: 0%;
 }
+
+#nato {
+  float: left;
+  margin-top: 2%;
+  height: 130px;
+  width: 130px;
+  border-style: solid;
+  margin-left: 10px;
+}
+#para {
+  float: left;
+  width: 60%;
+  height: auto;
+  border-style: solid;
+  margin-top: 4%;
+  margin-left: 10px;
+  background-color: black;
+}
+
+#about-me h1 {
+  margin-left: 20px;
+}
