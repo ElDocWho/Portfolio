@@ -48,3 +48,19 @@ $('#projects header:nth-of-type(3)').on('click', function() {
 $('#projects header:nth-child(4)').on('click', function() {
   window.location.href = 'https://github.com/ElDocWho/lab-02-about-me';
 });
+$(document).ready(function(){
+  $('#about-me').hide();
+});
+$('a.icon-address-book').click(function(){
+  $('#about-me').show();
+  $('#projects').hide();
+});
+
+//about me
+$(document).ready(function(){
+  $('#about-me').hide();
+});
+$('a.icon-home').click(function(){
+  $('#about-me').hide();
+  $('#projects').show();
+});

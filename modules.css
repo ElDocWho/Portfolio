@@ -19,6 +19,9 @@ body {
   display: none;
 
   }
+  #about-me {
+    margin-top: 20px;
+  }
 }
 @media screen and (max-width: 905px){
   nav.main-navig{
@@ -106,4 +109,8 @@ li {
 #projects {
   margin-right: 0%;
 }
+#about-me {
+  margin-top: 230px;
+}
+
 }
