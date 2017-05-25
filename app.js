@@ -14,10 +14,10 @@ PortfolioProjects.prototype.toHtml = function() {
   $newProject.find('address a').html(this.projectName);
   $newProject.find('address a').attr('href', this.projectURL);
   $newProject.find('h1').html(this.projectName);
-  $newProject.find('.project-desc').html(this.projectDescription);
+  $newProject.find('project.project-desc').html(this.projectDescription);
+  console.log($newProject);
   return $newProject;
 };
-
 rawData.sort(function(a,b) {
   return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
 });
