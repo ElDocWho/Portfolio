@@ -14,4 +14,3 @@ var rawData = [
     projectURL: 'https://github.com/ElDocWho/lab-02-about-me',
     projectDescription: 'place Holder'
   }];
-console.log(rawData);

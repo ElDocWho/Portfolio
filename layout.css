@@ -28,20 +28,6 @@ header {
   margin-right: 1%;
   align-items: center;
 }
-#preview {
-  height: 50%;
-  width: 50%;
-  float: right;
-  margin-right: 20%;
-  margin-top: -30%;
-  border-radius: 50%;
-
-}
-
-#round {
-  border-radius: 200%;
-  margin-left: 0%;
-}
 
 #nato {
   float: left;
@@ -63,4 +49,8 @@ header {
 
 #about-me h1 {
   margin-left: 20px;
+}
+
+#preview {
+  display: none;
 }

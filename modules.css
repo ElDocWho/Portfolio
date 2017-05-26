@@ -42,16 +42,12 @@ body {
   }
 
   #preview {
-    height: 50%;
-    width: 50%;
-    float: right;
-    margin-right: -10%;
-    margin-top: 10%;
-  }
-  html {
-    width: 100%;
-    /*height: 100%;*/
-    color: white;
+    height: 100px;
+    width: 100px;
+    float: left;
+    margin-left: 65px;
+    margin-top: 510px;
+    border-radius: 50px;
   }
   .main-navig ul{
     display: block;
@@ -92,9 +88,7 @@ section#projects {
   margin-left: 20px;
 
 }
-#round {
-display: none;
-}
+
 hr {
   display: none;
 }
