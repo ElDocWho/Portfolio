@@ -9,7 +9,14 @@
     <link rel="stylesheet" href="layout.css">
     <link rel="stylesheet" href="reset.css">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-
+    <script id="template" type="text/x-handlebars-template">
+            <header>
+              <h1>{{projectName}}</h1>
+              <div class="projectLink">
+                Project Link: <address><a href="{{projectURL}}">{{projectName}}</a></address>
+              </div>
+            </header>
+    </script>
   </head>
   <body>
     <nav class="main-nav">
@@ -41,20 +48,13 @@
     </div>
     </div>
     <main>
-    <section id="projects">
-      <project class="template">
-        <header>
-          <h1>Project Name</h1>
-          <div class="projectLink">
-            Project Link: <address><a href="">Project</a></address>
-          </div>
-        </header>
-        <section class=".project-desc"></section>
-      </project>
-    </section>
-    <div id="preview"></div>
-  </main>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <section id="projects" class="tab-content">
+      </section>
+    </main>
+    <img id="preview" src="img/mouse.gif" alt="busmall">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
     <script type="text/javascript" src="data.js"></script>
     <script type="text/javascript" src="app.js"></script>
   </body>
