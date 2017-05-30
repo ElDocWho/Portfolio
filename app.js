@@ -2,25 +2,36 @@
 
 var projects = [];
 
-function PortfolioProjects (rawDataObject){
-  this.projectName = rawDataObject.projectName;
-  this.projectURL = rawDataObject.projectURL;
-  this.projectDescription = rawDataObject.projectDescription;
-}
+function PortfolioProjects (rawDataObject) {
+  console.log('hola');
+  for (key in rawDataObject) {
+    this[key] = rawDataObject[key];
+  }
+};
 
 PortfolioProjects.prototype.toHtml = function() {
-  var getTemplate = $('#template').html();
-  var templates = Handlebars.compile(getTemplate);
-  return templates(this);
+  var templateRender = Handlebars.compile($('#template').html());
+  return templateRender(this);
 };
-rawData.forEach(function(projectObject) {
-  projects.push(new PortfolioProjects(projectObject));
-});
-
-projects.forEach(function(project){
-  $('#projects').append(project.toHtml());
-});
-
+function handleShowNeighborhoods() {
+  $.getJSON('/data/proj.json')
+  .then(
+    function(data) {
+      localStorage.setItem('proj', JSON.stringify(data));
+      data.forEach(function(projectObject) {
+        projects.push(new PortfolioProjects(projectObject));
+        console.log('projects array being built', projects);
+      });
+      projects.forEach(function(ourNewprojectObject){
+        $('#projects').append(ourNewprojectObject.toHtml());
+      });
+    },
+    // FAIL CALLBACK
+    function(err) {
+      console.error(err);
+    });
+}
+console.log('projects array', projects);
 $(document).ready(function(){
   $('#preview').hide();
 });
@@ -29,8 +40,8 @@ $('section header:nth-child(1)').hover(function(){
   console.log(1);
   $('#preview').show();
 },
-function () { $('#preview').hide();
-});
+  function () { $('#preview').hide();
+  });
 
 $('section header:nth-child(2)').hover(function(){
   console.log(2);
