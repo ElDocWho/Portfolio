@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "fortunato maycotte portfolio",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElDocWho/Portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ElDocWho/Portfolio/issues"
+  },
+  "homepage": "https://github.com/ElDocWho/Portfolio#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
