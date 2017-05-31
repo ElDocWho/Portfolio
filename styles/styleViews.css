@@ -1,6 +1,6 @@
 body {
   background-repeat: no-repeat;
-  background-image: url(img/vot2.gif);
+  background-image: url(/img/vot2.gif);
   background-size: 100% 100%;
 
 }
@@ -18,8 +18,8 @@ nav {
   height: 15%;
   width: 100%;
 }
-header {
-  background-image: url(img/volt4.gif);
+.cloud {
+  background-image: url(/img/volt4.gif);
   border-radius: 100px;
   text-align: center;
   padding: 2%;

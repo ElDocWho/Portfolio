@@ -1,61 +1,71 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Fortunato Maycotte</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="base.css">
-    <link rel="stylesheet" href="modules.css">
-    <link rel="stylesheet" href="layout.css">
-    <link rel="stylesheet" href="reset.css">
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-    <script id="template" type="text/x-handlebars-template">
-            <header>
-              <h1>{{projectName}}</h1>
-              <div class="projectLink">
+<head>
+  <title>Fortunato Maycotte</title>
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+  <link type="text/css" href="/styles/modules.css" rel="stylesheet">
+  <link type="text/css" href="/styles/reset.css" rel="stylesheet">
+  <link type="text/css" href="/styles/base.css" rel="stylesheet">
+  <link type="text/css" href="/styles/styleViews.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <script src="https://use.fontawesome.com/ea077f6abd.js"></script>
+  <!-- Script for the handlebar.js template -->
+  <script id="projects-template" type="text/x-handlebars-template">
+        <projects class="project-template">
+          <headers>
+          <div class="cloud"
+          <h2>{{projectName}}</h2>
+          <div class="projectLink">
                 Project Link: <address><a href="{{projectURL}}">{{projectName}}</a></address>
-              </div>
-            </header>
-    </script>
-  </head>
-  <body>
-    <nav class="main-nav">
-        <span class="icon-menu"></span>
-        <ul >
-          <li data-content="Home"><a href="#" class="icon-home"> Home</a></li>
-          <li id="ab" data-content="about"><a href="#" class="icon-address-book"> About</a></li>
-          <li> <a href="https://twitter.com/E4VirusNuker" target="_blank" class="icon-twitter3"> Twitter</a></li>
-          <li><a href="https://github.com/ElDocWho" target="_blank" class="icon-github"> GitHub</a></li>
-        </ul>
-    </nav>
-    <hr>
-    <nav class="main-navig">
-        <span class="icon-menu"></span>
-        <ul >
-          <li data-content="Home"><a href="#" class="icon-home"> Home</a></li>
-          <li data-content="about"><a href="#" class="icon-address-book"> About</a></li>
-          <li> <a href="https://twitter.com/E4VirusNuker" target="_blank" class="icon-twitter3"> Twitter</a></li>
-          <li><a href="https://github.com/ElDocWho" target="_blank" class="icon-github"> GitHub</a></li>
-        </ul>
-    </nav>
-    <img id="ham" src="img/ham.png" alt='hamburger'>
-    <div id="about-me">
-      <h1>About Fortunato</h1>
-      <img id="nato" src="img/Nato.jpg" alt="nato">
-    <div id="para">
-      <p>I am Fortunato Maycotte, born in Monterrey, Mexico. I have lived most of my life also in San Antonio, Texas and Cancun, Mexico.</p>
-      <p>I am a developer, electronics engineer and medic.</p>
-    </div>
-    </div>
-    <main>
-      <section id="projects" class="tab-content">
-      </section>
-    </main>
-    <img id="preview" src="img/mouse.gif" alt="busmall">
+          </div>
+          </div>
+          <div class="desc">Project description {{projectDescription}}<div/>
+        </headers>
+        </projects>
+  </script>
+</head>
+<body>
+  <nav class="main-nav">
+          <span class="icon-menu"></span>
+          <ul >
+            <li data-content="Home"><a href="#" class="icon-home"> Home</a></li>
+            <li id="ab" data-content="about"><a href="#" class="icon-address-book"> About</a></li>
+            <li> <a href="https://twitter.com/E4VirusNuker" target="_blank" class="icon-twitter3"> Twitter</a></li>
+            <li><a href="https://github.com/ElDocWho" target="_blank" class="icon-github"> GitHub</a></li>
+          </ul>
+      </nav>
+      <hr>
+      <nav class="main-navig">
+          <span class="icon-menu"></span>
+          <ul >
+            <li data-content="Home"><a href="#" class="icon-home"> Home</a></li>
+            <li data-content="about"><a href="#" class="icon-address-book"> About</a></li>
+            <li> <a href="https://twitter.com/E4VirusNuker" target="_blank" class="icon-twitter3"> Twitter</a></li>
+            <li><a href="https://github.com/ElDocWho" target="_blank" class="icon-github"> GitHub</a></li>
+          </ul>
+      </nav>
+      <img id="ham" src="img/ham.png" alt='hamburger'>
+      <div id="about-me">
+        <h1>About Fortunato</h1>
+        <img id="nato" src="img/Nato.jpg" alt="nato">
+      <div id="para">
+        <p>I am Fortunato Maycotte, born in Monterrey, Mexico. I have lived most of my life also in San Antonio, Texas and Cancun, Mexico.</p>
+        <p>I am a developer, electronics engineer and medic.</p>
+      </div>
+      </div>
+      <main>
+        <section id="projects" class="tab-content">
+        </section>
+      </main>
+      <img id="preview" src="img/mouse.gif" alt="busmall">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
-    <script type="text/javascript" src="app.js"></script>
-    <script> handleShowNeighborhoods();</script>
-  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+  <script src="/scripts/portfolioScript.js"></script>
+  <script src="/scripts/contentView.js"></script>
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+  <script>
+  PortfolioCreate.fetchAll();
+  </script>
+</body>
 </html>

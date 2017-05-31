@@ -1,0 +1,17 @@
+[
+  {
+    "projectName": "Bus Mall",
+    "projectURL": "https://github.com/ElDocWho/bus-mall1",
+    "projectDescription": "In this project the user gets shown 3 images of products 25 times and selects one each time to find out what the consumer tendencies are."
+  },
+  {
+    "projectName": "Salmon Cookies",
+    "projectURL": "https://github.com/ElDocWho/cookie-stand1",
+    "projectDescription": "This project gives us a table of how many cookies were sold in a day and per hour. It is for different cookie stores through out Seattle."
+  },
+  {
+    "projectName": "About Me",
+    "projectURL": "https://github.com/ElDocWho/lab-02-about-me",
+    "projectDescription": "This project is basically what the name says, its about Fortunato Maycotte. It also has a guessing game regarding information about me."
+  }
+]
