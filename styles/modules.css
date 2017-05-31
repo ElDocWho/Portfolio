@@ -5,6 +5,7 @@
 body {
   background-color: black;
   color: white;
+  background-image: url(/img/vot2.gif);
 }
 @media screen and (min-width: 906px){
   #ham {
@@ -22,11 +23,11 @@ body {
   background: none;
   display: block;
   }
-  nav.main-navig{
-  background: none;
-  display: none;
-
+  nav.main-navig ul {
+    display: none;
   }
+
+
   #about-me {
     margin-top: 20px;
   }
@@ -114,5 +115,7 @@ li {
 #about-me {
   margin-top: 230px;
 }
-
+.desc {
+  display: none;
+}
 }

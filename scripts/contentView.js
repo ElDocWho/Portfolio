@@ -1,44 +1,29 @@
 'use strict';
+const projectView = {};
 
-var projects = [];
-
-function PortfolioProjects (rawDataObject){
-  this.projectName = rawDataObject.projectName;
-  this.projectURL = rawDataObject.projectURL;
-  this.projectDescription = rawDataObject.projectDescription;
-}
-
-PortfolioProjects.prototype.toHtml = function() {
-  var getTemplate = $('#template').html();
-  var templates = Handlebars.compile(getTemplate);
-  return templates(this);
+projectView.initIndexPage = function() {
+  PortfolioCreate.all.forEach(function(article) {
+    $('#projects').append(article.toHtml())
+  });
 };
-rawData.forEach(function(projectObject) {
-  projects.push(new PortfolioProjects(projectObject));
-});
-
-projects.forEach(function(project){
-  $('#projects').append(project.toHtml());
-});
-
 $(document).ready(function(){
   $('#preview').hide();
 });
 
-$('section header:nth-child(1)').hover(function(){
+$('main#projects projects.class-templates headers a').hover(function(){
   console.log(1);
   $('#preview').show();
 },
 function () { $('#preview').hide();
 });
 
-$('section header:nth-child(2)').hover(function(){
+$('section#project.tab-content:nth-child(2)').hover(function(){
   console.log(2);
   $('#preview').show();
 },
 function () { $('#preview').hide();
 });
-$('section header:nth-child(3)').hover(function(){
+$('section#project.tab-content:nth-child(3)').hover(function(){
   console.log(3);
   $('#preview').show();
 },
@@ -51,13 +36,13 @@ $(document).ready(function(){
 $('#ham').click(function(){
   $('nav.main-navig').toggle();
 });
-$('section header:nth-child(1)').on('click', function() {
+$('project.project-template:nth-child(1)').on('click', function() {
   window.location.href = 'https://github.com/ElDocWho/bus-mall1';
 });
-$('section header:nth-child(2)').on('click', function() {
+$('project.project-template:nth-child(1)').on('click', function() {
   window.location.href = 'https://github.com/ElDocWho/cookie-stand1';
 });
-$('section header:nth-child(3)').on('click', function() {
+$('project.project-template:nth-child(1)').on('click', function() {
   window.location.href = 'https://github.com/ElDocWho/lab-02-about-me';
 });
 $(document).ready(function(){

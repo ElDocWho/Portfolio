@@ -3,6 +3,14 @@ background: none;
 display: none;
 
 }
+.desc {
+  width: 50%;
+  float: left;
+  border-style: groove;
+  margin-left: 25%;
+  margin-top: -8%;
+  background-color: black;
+}
 ul {
   font-family: 'Indie Flower', cursive;
 }
